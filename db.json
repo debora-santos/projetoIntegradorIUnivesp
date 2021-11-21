@@ -1,28 +1,20 @@
 {
   "produtos": [
     {
-      "bairro": "",
-      "empresa": "",
-      "produto": "",
-      "descricao": "",
-      "valor": "",
+      "bairro": "Ipiranga",
+      "empresa": "Aroma da terra",
+      "produto": "Sabonetes",
+      "descricao": "Sabonetes artesanais para uso doméstico",
+      "valor": "5 reais",
       "id": 1
     },
     {
-      "bairro": "Ipiranga",
-      "empresa": "Empresa 1",
-      "produto": "batata",
-      "descricao": "tuberculo",
-      "valor": "1",
+      "bairro": "Jabaquara",
+      "empresa": "Doce Maria",
+      "produto": "Doces artesanais",
+      "descricao": "Brigadeiros e beijinhos artesanais para sua festa",
+      "valor": "50 reais o cento",
       "id": 2
-    },
-    {
-      "bairro": "Vila Guarani",
-      "empresa": "asda",
-      "produto": "dasda",
-      "descricao": "a",
-      "valor": "dasd",
-      "id": 3
     }
   ]
 }
