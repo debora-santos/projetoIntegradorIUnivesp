@@ -26,14 +26,6 @@
     },
     {
       "bairro": "Ipiranga",
-      "empresa": "Ceramica da Cê",
-      "nome": "Prato",
-      "descricao": " 5cm (unidade)",
-      "valor": 5,
-      "id": 4
-    },
-    {
-      "bairro": "Ipiranga",
       "empresa": " Ceramica da Cê ",
       "nome": " Prato",
       "descricao": "  10cm (unidade) ",
@@ -55,6 +47,22 @@
       "descricao": "Batata Frita (kg)",
       "valor": 1,
       "id": 8
+    },
+    {
+      "bairro": "Ipiranga",
+      "empresa": "Ipiranga doces",
+      "nome": "Brigadeiro",
+      "descricao": "Brigadeiros caseiros para sua festa! (cento)",
+      "valor": 55,
+      "id": 9
+    },
+    {
+      "bairro": "Jabaquara",
+      "empresa": "Cervejaria do seu Zé",
+      "nome": "Cerveja",
+      "descricao": "Cervejas artesanais para o seu evento! (unidade)",
+      "valor": 12,
+      "id": 10
     }
   ]
 }
