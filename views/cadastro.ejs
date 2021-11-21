@@ -73,29 +73,31 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <row></row>
-        <form method="post" action="http://localhost:3004/produtos">
-            <div class="form-group">
-                <input type="hidden" class="form-control" id="bairro" name="bairro" aria-describedby="" value='<%=bairro%>'>
-              </div>
+        <form id="formulario" name="formulario">
+            
+            <input type="hidden" class="form-control" id="bairro" name="bairro" aria-describedby="" value='<%=bairro%>'>
+              <%if(locals.id){%> 
+                <input type="hidden" class="form-control" id="id" name="id" aria-describedby="" value='<%=id%>'>
+              <%};%>
             <div class="form-group">
               <label for="Empresa">Nome da empresa</label>
-              <input type="text" class="form-control" id="empresa" name="empresa" aria-describedby="" placeholder="Entre o nome da sua empresa">
+              <input type="text" class="form-control" id="empresa" name="empresa" aria-describedby="" placeholder="Entre o nome da sua empresa" value='<%if(locals.empresa){%><%=empresa%><%};%>'>
             </div>
             <div class="form-group">
                 <label for="Empresa">Nome do produto</label>
-                <input type="text" class="form-control" id="nome" name="nome" aria-describedby="" placeholder="Nome do produto">
+                <input type="text" class="form-control" id="nome" name="nome" aria-describedby="" placeholder="Nome do produto" value='<%if(locals.nome){%><%=nome%><%}%>'>
               </div>
               <div class="form-group">
                 <label for="Empresa">Descrição</label>
-                <input type="text" class="form-control" id="descricao" name="descricao" aria-describedby="" placeholder="Detalhes do produto">
+                <input type="text" class="form-control" id="descricao" name="descricao" aria-describedby="" placeholder="Detalhes do produto" value='<%if(locals.descricao){%><%=descricao%><%}%>'>
               </div>
               <div class="form-group">
                 <label for="Empresa">Valor</label>
-                <input type="number" class="form-control" id="valor" name="valor" aria-describedby="" min="1" placeholder="Valor">
+                <input type="number" class="form-control" id="valor" name="valor" aria-describedby="" min="1" placeholder="Valor" value='<%if(locals.valor){%><%=Number(valor)%><%}%>'>
               </div>
               <br/>
-
-            <button onclick="alert('cadastrado com sucesso!')" type="submit" class="btn btn-primary">Enviar</button>
+            <button onclick="javascript:cadastrar(
+              <%if(locals.id){%><%=id%><%};%>);" class="btn btn-primary">Enviar</button>
           </form>
     </div>
   </div>
@@ -106,6 +108,46 @@
     <p class="mb-1">Feito com Bootstrap</p>
   </div>
 </footer>
+    <script>
+      function cadastrar(id){
+        body = {
+            bairro:document.getElementById("bairro").value,
+            empresa:document.getElementById("empresa").value,
+            nome:document.getElementById("nome").value,
+            descricao:document.getElementById("descricao").value,
+            valor:Number(document.getElementById("valor").value),
+        }
+        if(id){
+          body.id=Number(document.getElementById("id").value);
+          fetch('http://localhost:3004/produtos/'+body.id, {
+            method: 'PATCH',
+            body: JSON.stringify(body),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8'
+            }
+          })
+          .then(res => {
+            alert('editado com sucesso!');
+            window.location.href("/lista_produtos/?bairro="+body.bairro);
+          })
+          .then(console.log)
+        }else{
+          console.log(body);
+          fetch('http://localhost:3004/produtos', {
+            method: 'POST',
+            body: JSON.stringify(body),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8'
+            }
+          })
+          .then(res => {
+            alert('cadastrado com sucesso!');
+            window.location.href("/lista_produtos/?bairro="+body.bairro);
+          })
+          .then(console.log)
+        }
+      }
+    </script>
     <script src="./bootstrap.min.js"></script>
       
   </body>
