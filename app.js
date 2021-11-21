@@ -25,7 +25,7 @@ app.get('/produtos', (req, res) => {
 })
 
 app.get('/cadastro', (req, res) => {
-    res.render('cadastro')
+    res.render('cadastro', {bairro:req.query.bairro})
 })
 
 app.post('/cadastrar', (req, res) => {
@@ -51,10 +51,11 @@ app.post('/cadastrar', (req, res) => {
 
 app.get('/lista_produtos', (req, res) => {
     let url = `http://localhost:${databasePort}/produtos`;
+    console.log('req:', req.query); 
     request(url, function (error, response, body) {
         console.error('error:', error);
         console.log('statusCode:', response && response.statusCode); 
         console.log('body:', body); 
-        res.render('produtos', {produtos:body})
+        res.render('produtos', {produtos:body,bairro:req.query.bairro})
     });    
 })

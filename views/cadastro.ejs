@@ -37,7 +37,7 @@
           <p class="text-muted">#NaVilaTem é um projeto para as pessoas de cada vila da cidade de São Paulo cadastrarem o que tem no comércio local.</p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
+          <h4 class="text-white">Contato</h4>
           <ul class="list-unstyled">
             <li><a href="#" class="text-white">Siga no Twitter</a></li>
             <li><a href="#" class="text-white">Curta no Facebook</a></li>
@@ -49,7 +49,7 @@
   </div>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
+      <a href="/" class="navbar-brand d-flex align-items-center">
         <strong>#NaVilaTem</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Página de cadastro</h1>
+        <h1 class="fw-light">Cadastre o seu produto do bairro <br/> <strong><%=bairro%></strong></h1>
         <p class="lead text-muted"></p>
         <p>
         </p>
@@ -72,10 +72,10 @@
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <row></row>
         <form method="post" action="http://localhost:3004/produtos">
             <div class="form-group">
-                <label for="Empresa">Bairro</label>
-                <input type="text" class="form-control" id="bairro" name="bairro" aria-describedby="" placeholder="Bairro onde o produto é vendido">
+                <input type="hidden" class="form-control" id="bairro" name="bairro" aria-describedby="" value='<%=bairro%>'>
               </div>
             <div class="form-group">
               <label for="Empresa">Nome da empresa</label>
@@ -91,7 +91,7 @@
               </div>
               <div class="form-group">
                 <label for="Empresa">Valor</label>
-                <input type="text" class="form-control" id="valor" name="valor" aria-describedby="" placeholder="Valor">
+                <input type="number" class="form-control" id="valor" name="valor" aria-describedby="" min="1" placeholder="Valor">
               </div>
               <br/>
 

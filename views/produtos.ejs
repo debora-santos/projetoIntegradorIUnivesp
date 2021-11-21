@@ -49,7 +49,7 @@
   </div>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
+      <a href="/" class="navbar-brand d-flex align-items-center">
         <strong>#NaVilaTem</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +77,7 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">Id</th>
                 <th scope="col">Bairro</th>
                 <th scope="col">Empresa</th>
                 <th scope="col">Nome</th>
@@ -86,25 +86,10 @@
               </tr>
             </thead>
             <tbody>
-              <!-- teste/mock <tr>
-                <th scope="row">1</th>
-                <td>Ipiranga</td>
-                <td>Aroma da terra</td>
-                <td>Sabonetes</td>
-                <td>Sabonetes artesanais para uso doméstico</td>
-                <td>5 reais</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jabaquara</td>
-                <td>Doce Maria</td>
-                <td>Doces artesanais</td>
-                <td>Brigadeiros e beijinhos artesanais para sua festa</td>
-                <td>50 reais o cento</td>
-              </tr> -->
               <% if(produtos){
                 produtos= JSON.parse(produtos);
                 produtos.forEach((produto)=>{
+                  if(produto.bairro && String(produto.bairro).toUpperCase()==String(bairro).toUpperCase()){
                   %>
                   <tr>
                     <th scope="row"><%=produto.id%></th>
@@ -114,8 +99,7 @@
                     <td><%=produto.descricao%></td>
                     <td>R$<%=Number(produto.valor).toFixed(2)%></td>
                   </tr>
-                  
-                  <%
+                  <%}
                 });
               };%>
               

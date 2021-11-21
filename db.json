@@ -23,6 +23,22 @@
       "descricao": "Cerveja gourmet artesanal, vegana, sem gluten",
       "valor": "30.00",
       "id": 3
+    },
+    {
+      "bairro": "Ipiranga",
+      "empresa": "Ceramica da Cê",
+      "nome": "Pratinho",
+      "descricao": " 5cm (unidade)",
+      "valor": "5",
+      "id": 4
+    },
+    {
+      "bairro": "Ipiranga",
+      "empresa": "Posto Ipiranga",
+      "nome": "Gasolina",
+      "descricao": "Aditivada 90%",
+      "valor": "10",
+      "id": 5
     }
   ]
 }
