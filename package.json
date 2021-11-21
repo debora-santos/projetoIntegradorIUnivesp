@@ -18,6 +18,7 @@
   "homepage": "https://github.com/debora-santos/projetoIntegradorIUnivesp#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "request": "^2.88.2"
   }
 }
