@@ -27,17 +27,17 @@
     {
       "bairro": "Ipiranga",
       "empresa": "Ceramica da Cê",
-      "nome": "Pratinho",
+      "nome": "Prato",
       "descricao": " 5cm (unidade)",
-      "valor": "5",
+      "valor": 5,
       "id": 4
     },
     {
       "bairro": "Ipiranga",
       "empresa": " Ceramica da Cê ",
-      "nome": " Pratinho ",
+      "nome": " Prato",
       "descricao": "  10cm (unidade) ",
-      "valor": "10",
+      "valor": 10,
       "id": 5
     },
     {
@@ -45,8 +45,16 @@
       "empresa": "JabaSalgados",
       "nome": "Coxinha",
       "descricao": "De catupiry",
-      "valor": 44,
+      "valor": 5,
       "id": 6
+    },
+    {
+      "bairro": "Vila Mariana",
+      "empresa": "Natuterra",
+      "nome": "Álcool",
+      "descricao": "Álcool em gel com hidratante para as mãos",
+      "valor": 10,
+      "id": 7
     }
   ]
 }
