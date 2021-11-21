@@ -58,13 +58,11 @@
     </div>
   </div>
 </header>
-
 <main>
-
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Listagem dos bairros</h1>
+        <h1 class="fw-light">Página de cadastro</h1>
         <p class="lead text-muted"></p>
         <p>
         </p>
@@ -74,39 +72,33 @@
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Bairro</th>
-                <th scope="col">Empresa</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Descricao</th>
-                <th scope="col">Valor</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Ipiranga</td>
-                <td>Aroma da terra</td>
-                <td>Sabonetes</td>
-                <td>Sabonetes artesanais para uso doméstico</td>
-                <td>5 reais</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jabaquara</td>
-                <td>Doce Maria</td>
-                <td>Doces artesanais</td>
-                <td>Brigadeiros e beijinhos artesanais para sua festa</td>
-                <td>50 reais o cento</td>
-              </tr>
-            </tbody>
-          </table>  
+        <form method="post" action="http://localhost:3004/produtos">
+            <div class="form-group">
+                <label for="Empresa">Bairro</label>
+                <input type="text" class="form-control" id="bairro" name="bairro" aria-describedby="" placeholder="Bairro onde o produto é vendido">
+              </div>
+            <div class="form-group">
+              <label for="Empresa">Nome da empresa</label>
+              <input type="text" class="form-control" id="empresa" name="empresa" aria-describedby="" placeholder="Entre o nome da sua empresa">
+            </div>
+            <div class="form-group">
+                <label for="Empresa">Nome do produto</label>
+                <input type="text" class="form-control" id="produto" name="produto" aria-describedby="" placeholder="Nome do produto">
+              </div>
+              <div class="form-group">
+                <label for="Empresa">Descrição</label>
+                <input type="text" class="form-control" id="descricao" name="descricao" aria-describedby="" placeholder="Detalhes do produto">
+              </div>
+              <div class="form-group">
+                <label for="Empresa">Valor</label>
+                <input type="text" class="form-control" id="valor" name="valor" aria-describedby="" placeholder="Valor">
+              </div>
+              <br/>
+
+            <button onclick="alert('cadastrado com sucesso!')" type="submit" class="btn btn-primary">Enviar</button>
+          </form>
     </div>
   </div>
-
 </main>
 
 <footer class="text-muted py-5">

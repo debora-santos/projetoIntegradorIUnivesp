@@ -1,19 +1,28 @@
 {
-  "posts": [
+  "produtos": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "bairro": "",
+      "empresa": "",
+      "produto": "",
+      "descricao": "",
+      "valor": "",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "bairro": "Ipiranga",
+      "empresa": "Empresa 1",
+      "produto": "batata",
+      "descricao": "tuberculo",
+      "valor": "1",
+      "id": 2
+    },
+    {
+      "bairro": "Vila Guarani",
+      "empresa": "asda",
+      "produto": "dasda",
+      "descricao": "a",
+      "valor": "dasd",
+      "id": 3
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
