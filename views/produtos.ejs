@@ -86,7 +86,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!-- teste/mock <tr>
                 <th scope="row">1</th>
                 <td>Ipiranga</td>
                 <td>Aroma da terra</td>
@@ -101,7 +101,24 @@
                 <td>Doces artesanais</td>
                 <td>Brigadeiros e beijinhos artesanais para sua festa</td>
                 <td>50 reais o cento</td>
-              </tr>
+              </tr> -->
+              <% if(produtos){
+                produtos= JSON.parse(produtos);
+                produtos.forEach((produto)=>{
+                  %>
+                  <tr>
+                    <th scope="row"><%=produto.id%></th>
+                    <td><%=produto.bairro%></td>
+                    <td><%=produto.empresa%></td>
+                    <td><%=produto.nome%></td>
+                    <td><%=produto.descricao%></td>
+                    <td>R$<%=Number(produto.valor).toFixed(2)%></td>
+                  </tr>
+                  
+                  <%
+                });
+              };%>
+              
             </tbody>
           </table>  
     </div>

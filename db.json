@@ -3,18 +3,26 @@
     {
       "bairro": "Ipiranga",
       "empresa": "Aroma da terra",
-      "produto": "Sabonetes",
+      "nome": "Sabonetes",
       "descricao": "Sabonetes artesanais para uso doméstico",
-      "valor": "5 reais",
+      "valor": "5.00",
       "id": 1
     },
     {
       "bairro": "Jabaquara",
       "empresa": "Doce Maria",
-      "produto": "Doces artesanais",
-      "descricao": "Brigadeiros e beijinhos artesanais para sua festa",
-      "valor": "50 reais o cento",
+      "nome": "Doces artesanais",
+      "descricao": "Brigadeiros e beijinhos artesanais para sua festa (cento)",
+      "valor": "50",
       "id": 2
+    },
+    {
+      "bairro": "Vila Mariana",
+      "empresa": "Cervejaria Gourmet",
+      "nome": "Cerveja lata IPA",
+      "descricao": "Cerveja gourmet artesanal, vegana, sem gluten",
+      "valor": "30.00",
+      "id": 3
     }
   ]
 }
