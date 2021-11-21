@@ -73,8 +73,8 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <row></row>
+        <row>
         <form id="formulario" name="formulario">
-            
             <input type="hidden" class="form-control" id="bairro" name="bairro" aria-describedby="" value='<%=bairro%>'>
               <%if(locals.id){%> 
                 <input type="hidden" class="form-control" id="id" name="id" aria-describedby="" value='<%=id%>'>
@@ -96,9 +96,10 @@
                 <input type="number" class="form-control" id="valor" name="valor" aria-describedby="" min="1" placeholder="Valor" value='<%if(locals.valor){%><%=Number(valor)%><%}%>'>
               </div>
               <br/>
+            </form>
             <button onclick="javascript:cadastrar(
               <%if(locals.id){%><%=id%><%};%>);" class="btn btn-primary">Enviar</button>
-          </form>
+        </row>
     </div>
   </div>
 </main>
@@ -127,10 +128,12 @@
             }
           })
           .then(res => {
-            alert('editado com sucesso!');
-            window.location.href("/lista_produtos/?bairro="+body.bairro);
+            console.log(res)
           })
-          .then(console.log)
+          .then(()=>{
+            alert('editado com sucesso!');
+            window.location.replace("http://localhost:3000/lista_produtos?bairro="+body.bairro)
+          })
         }else{
           console.log(body);
           fetch('http://localhost:3004/produtos', {
@@ -141,11 +144,15 @@
             }
           })
           .then(res => {
-            alert('cadastrado com sucesso!');
-            window.location.href("/lista_produtos/?bairro="+body.bairro);
+            console.log(res)
           })
-          .then(console.log)
+          .then(()=>{
+            alert('cadastrado com sucesso!');
+            window.location.replace("http://localhost:3000/lista_produtos?bairro="+body.bairro)
+          })
         }
+        //window.history.back();
+        
       }
     </script>
     <script src="./bootstrap.min.js"></script>

@@ -13,7 +13,7 @@
       "empresa": "Doce Maria",
       "nome": "Doces artesanais",
       "descricao": "Brigadeiros e beijinhos artesanais para sua festa (cento)",
-      "valor": "50",
+      "valor": 50,
       "id": 2
     },
     {
@@ -37,24 +37,24 @@
       "empresa": " Ceramica da Cê ",
       "nome": " Prato",
       "descricao": "  10cm (unidade) ",
-      "valor": 10,
+      "valor": 11,
       "id": 5
-    },
-    {
-      "bairro": "Jabaquara",
-      "empresa": "JabaSalgados",
-      "nome": "Coxinha",
-      "descricao": "De catupiry",
-      "valor": 5,
-      "id": 6
     },
     {
       "bairro": "Vila Mariana",
       "empresa": "Natuterra",
       "nome": "Álcool",
       "descricao": "Álcool em gel com hidratante para as mãos",
-      "valor": 10,
+      "valor": 12,
       "id": 7
+    },
+    {
+      "bairro": "Jabaquara",
+      "empresa": "Minha Empresa",
+      "nome": "Batatinha Frita",
+      "descricao": "Batata Frita (kg)",
+      "valor": 1,
+      "id": 8
     }
   ]
 }

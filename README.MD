@@ -3,6 +3,13 @@
 ## Introdução
 Este arquivo serve para organizar e detalhar o desenvolvimento deste projeto
 
+## Técnologias utilizadas
+
+NodeJS como servidor
+Express como motor web
+Bootstrap para tema e CSS
+json-server como banco de dados
+
 ## Funcionalidades disponíveis
 
 - Website estático hosteado pelo NodeJS
